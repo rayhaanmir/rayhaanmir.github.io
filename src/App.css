@@ -20,7 +20,9 @@
   flex-direction: column;
   padding-left: 10px;
   font-size: 30px;
-  color: white;
+  font-family: monospace;
+  color: rgb(84, 215, 255);
+  cursor: pointer;
 }
 
 .button-row {
@@ -33,7 +35,7 @@
 }
 
 .github-logo {
-  padding-top: 10px;
+  padding-top: 30px;
   display: block;
   margin: 0 auto;
   width: 200px;
