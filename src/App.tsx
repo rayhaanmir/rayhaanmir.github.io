@@ -5,11 +5,33 @@ import instagram from "./assets/instagram.png";
 import ClickableIcon from "./components/ClickableIcon.tsx";
 import Dropdown from "./components/Dropdown/Dropdown.tsx";
 import React from "react";
+import { DropdownItemProps } from "./components/Dropdown/Item/DropdownItem.tsx";
 
 const App = () => {
-  const items = [
-    ["YouTube", "https://www.youtube.com"],
-    ["Wikipedia", "https://www.wikipedia.org"],
+  const items: DropdownItemProps[] = [
+    {
+      label: "YouTube",
+      action: () =>
+        window.open("https://www.youtube.com", "_blank", "noopener,noreferrer"),
+    },
+    {
+      label: "Wikipedia",
+      action: () =>
+        window.open(
+          "https://www.wikipedia.org",
+          "_blank",
+          "noopener,noreferrer"
+        ),
+    },
+    {
+      label: "My tag cloud generator",
+      action: () =>
+        window.open(
+          "https://rayhaanmir.github.io/TagCloudGenerator",
+          "_blank",
+          "noopener,noreferrer"
+        ),
+    },
   ];
   const website = "rayhaanmir.github.io";
   return (
@@ -22,15 +44,7 @@ const App = () => {
       </header>
       <img className="github-logo" src={github} alt="Github Logo" />
       <header className="title-header">Welcome to my Home Page!</header>
-      <Dropdown
-        buttonText="Check out these websites"
-        content={{
-          items: items.map((item) => ({
-            label: item[0],
-            action: item[1],
-          })),
-        }}
-      />
+      <Dropdown buttonText="Check out these websites" content={{ items }} />
       <div className="button-row">
         <ClickableIcon
           icon={github}

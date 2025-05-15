@@ -10,7 +10,7 @@ export interface DropdownContentProps {
 const DropdownContent = ({ items, open = false }: DropdownContentProps) => {
   return (
     <ul className={`dropdown-content ${open ? "content-open" : null}`}>
-      {items.map((item, index) => (
+      {items.map((item) => (
         <DropdownItem label={item.label} action={item.action} />
       ))}
     </ul>

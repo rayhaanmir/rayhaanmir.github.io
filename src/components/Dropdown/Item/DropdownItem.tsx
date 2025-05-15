@@ -3,7 +3,7 @@ import "./DropdownItem.css";
 
 export interface DropdownItemProps {
   label: string;
-  action: string;
+  action: () => void;
 }
 
 const DropdownItem = ({ label, action }: DropdownItemProps) => {
@@ -12,7 +12,7 @@ const DropdownItem = ({ label, action }: DropdownItemProps) => {
   return (
     <li
       className="dropdown-item"
-      onClick={() => window.open(action, "_blank", "noopener,noreferrer")}
+      onClick={action}
       onMouseEnter={() => {
         setHovered(true);
       }}
