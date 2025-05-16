@@ -18,11 +18,15 @@
   border-bottom: 3px solid #a1a1a1;
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
   font-size: 30px;
   font-family: monospace;
   color: rgb(84, 215, 255);
+}
+
+.top-header-text {
+  margin: 0.2rem;
   cursor: pointer;
+  max-width: fit-content;
 }
 
 .button-row {

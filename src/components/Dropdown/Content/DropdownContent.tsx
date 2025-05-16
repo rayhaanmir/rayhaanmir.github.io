@@ -11,7 +11,11 @@ const DropdownContent = ({ items, open = false }: DropdownContentProps) => {
   return (
     <ul className={`dropdown-content ${open ? "content-open" : null}`}>
       {items.map((item) => (
-        <DropdownItem label={item.label} action={item.action} />
+        <DropdownItem
+          key={item.label}
+          label={item.label}
+          action={item.action}
+        />
       ))}
     </ul>
   );

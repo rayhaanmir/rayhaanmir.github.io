@@ -9,7 +9,6 @@ interface DropdownButtonProps {
 }
 
 const DropdownButton = ({ text, setOpen, open }: DropdownButtonProps) => {
-  const [spinning, setSpinning] = useState(false);
   return (
     <div
       className={`dropdown-btn ${open ? "button-open" : null}`}

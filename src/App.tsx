@@ -36,11 +36,13 @@ const App = () => {
   const website = "rayhaanmir.github.io";
   return (
     <div className="App">
-      <header
-        className="top-header"
-        onClick={() => window.open(website, "_blank", "noopener,noreferrer")}
-      >
-        {website}
+      <header className="top-header">
+        <p
+          className="top-header-text"
+          onClick={() => window.open(website, "_blank", "noopener,noreferrer")}
+        >
+          {website}
+        </p>
       </header>
       <img className="github-logo" src={github} alt="Github Logo" />
       <header className="title-header">Welcome to my Home Page!</header>
