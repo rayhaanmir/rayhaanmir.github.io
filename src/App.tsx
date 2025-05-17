@@ -34,7 +34,9 @@ const App = () => {
       <header className="top-header">
         <p
           className="top-header-text"
-          onClick={() => window.open(website, "_blank", "noopener,noreferrer")}
+          onClick={() =>
+            window.open("rayhaanmir.github.io", "_blank", "noopener,noreferrer")
+          }
         >
           {website}
         </p>

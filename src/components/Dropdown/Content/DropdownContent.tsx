@@ -9,14 +9,30 @@ export interface DropdownContentProps {
 
 const DropdownContent = ({ items, open = false }: DropdownContentProps) => {
   return (
-    <ul className={`dropdown-content ${open ? "content-open" : null}`}>
-      {items.map((item) => (
-        <DropdownItem
-          key={item.label}
-          label={item.label}
-          action={item.action}
-        />
-      ))}
+    <ul
+      className={`dropdown-content ${open ? "content-open" : null}`}
+      style={
+        open
+          ? { maxHeight: `min(.1rem + ${items.length * 2.5}rem, 500px)` }
+          : {}
+      }
+    >
+      {items.map((item, index) =>
+        index === items.length - 1 ? (
+          <DropdownItem
+            key={item.label}
+            label={item.label}
+            action={item.action}
+            removeBottom={true}
+          />
+        ) : (
+          <DropdownItem
+            key={item.label}
+            label={item.label}
+            action={item.action}
+          />
+        )
+      )}
     </ul>
   );
 };

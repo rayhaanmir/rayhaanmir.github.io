@@ -4,9 +4,14 @@ import "./DropdownItem.css";
 export interface DropdownItemProps {
   label: string;
   action: () => void;
+  removeBottom?: boolean;
 }
 
-const DropdownItem = ({ label, action }: DropdownItemProps) => {
+const DropdownItem = ({
+  label,
+  action,
+  removeBottom = false,
+}: DropdownItemProps) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -19,7 +24,14 @@ const DropdownItem = ({ label, action }: DropdownItemProps) => {
       onMouseLeave={() => {
         setHovered(false);
       }}
-      style={{ backgroundColor: hovered ? "#7f7f7f" : "transparent" }}
+      style={
+        removeBottom
+          ? {
+              backgroundColor: hovered ? "#7f7f7f" : "transparent",
+              borderBottom: "0",
+            }
+          : { backgroundColor: hovered ? "#7f7f7f" : "transparent" }
+      }
     >
       {label}
     </li>
