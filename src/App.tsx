@@ -25,12 +25,7 @@ const App = () => {
     },
     {
       label: "My tag cloud generator",
-      action: () =>
-        window.open(
-          "https://rayhaanmir.github.io/TagCloudGenerator",
-          "_blank",
-          "noopener,noreferrer"
-        ),
+      action: () => (window.location.href = "/TagCloudGenerator"),
     },
   ];
   const website = "rayhaanmir.github.io";
