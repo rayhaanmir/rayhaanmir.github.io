@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./DropdownItem.css";
 
 export interface DropdownItemProps {
@@ -12,7 +12,7 @@ const DropdownItem = ({
   action,
   removeBottom = false,
 }: DropdownItemProps) => {
-  const [hovered, setHovered] = useState(false);
+  const [hovered, setHovered] = useState<boolean>(false);
 
   return (
     <li

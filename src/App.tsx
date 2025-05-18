@@ -4,8 +4,7 @@ import linkedin from "./assets/linkedin.png";
 import instagram from "./assets/instagram.png";
 import ClickableIcon from "./components/ClickableIcon.tsx";
 import Dropdown from "./components/Dropdown/Dropdown.tsx";
-import React from "react";
-import { DropdownItemProps } from "./components/Dropdown/Item/DropdownItem.tsx";
+import type { DropdownItemProps } from "./components/Dropdown/Item/DropdownItem.tsx";
 
 const App = () => {
   const items: DropdownItemProps[] = [
@@ -30,7 +29,7 @@ const App = () => {
   ];
   const website = "rayhaanmir.github.io";
   return (
-    <div className="App">
+    <>
       <header className="top-header">
         <p
           className="top-header-text"
@@ -43,7 +42,9 @@ const App = () => {
       </header>
       <img className="github-logo" src={github} alt="Github Logo" />
       <header className="title-header">Welcome to my Home Page!</header>
-      <Dropdown buttonText="Check out these websites" content={{ items }} />
+      <div className="dropdown">
+        <Dropdown buttonText="Check out these websites" content={{ items }} />
+      </div>
       <div className="button-row">
         <ClickableIcon
           icon={github}
@@ -61,7 +62,7 @@ const App = () => {
           scale={75}
         />
       </div>
-    </div>
+    </>
   );
 };
 

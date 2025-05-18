@@ -1,13 +1,7 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #282c34;
-}
-
 .title-header {
   display: flex;
-  flex-direction: column;
+  width: fit-content;
+  margin: auto;
   text-align: center;
   font-size: 75px;
   padding-bottom: 70px;
@@ -17,10 +11,11 @@
 .top-header {
   border-bottom: 3px solid #a1a1a1;
   display: flex;
+  width: 100vw;
   flex-direction: column;
   font-size: 30px;
   font-family: monospace;
-  color: rgb(84, 215, 255);
+  color: #54d7ff;
 }
 
 .top-header-text {
@@ -30,12 +25,12 @@
 }
 
 .button-row {
-  margin-top: auto;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: fit-content;
   display: flex;
-  justify-content: flex-end;
-  gap: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
+  gap: 0.5rem;
 }
 
 .github-logo {
@@ -45,17 +40,9 @@
   width: 200px;
   height: 200px;
 }
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
+.dropdown {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}

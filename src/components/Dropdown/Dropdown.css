@@ -1,7 +1,5 @@
 .dropdown {
   display: flex;
   flex-direction: column;
-  position: relative;
-  color: white;
-  align-self: center;
+  width: fit-content;
 }

@@ -1,5 +1,5 @@
-import React from "react";
 import { useState } from "react";
+import "./ClickableIcon.css";
 
 interface ClickableIconProps {
   icon: string;
@@ -14,10 +14,11 @@ const ClickableIcon = ({
   scale = 100,
   size = 60,
 }: ClickableIconProps) => {
-  const [hovered, setHovered] = useState(false);
+  const [hovered, setHovered] = useState<boolean>(false);
 
   return (
     <button
+      className="clickable-icon"
       onMouseEnter={() => {
         setHovered(true);
       }}
@@ -27,16 +28,10 @@ const ClickableIcon = ({
       onClick={() => window.open(link, "_blank", "noopener,noreferrer")}
       style={{
         backgroundImage: `url(${icon})`,
-        backgroundColor: hovered ? "#7f7f7f" : "transparent",
+        backgroundColor: hovered ? "#7f7f7f" : "#282c34",
         backgroundSize: `${scale}% ${scale}%`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        borderRadius: "5px",
-        borderWidth: "2px",
-        borderColor: "#aaaaaa",
         width: `${size}px`,
         height: `${size}px`,
-        transition: "background-color 0.2s ease",
       }}
     />
   );

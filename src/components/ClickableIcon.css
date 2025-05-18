@@ -1,0 +1,8 @@
+.clickable-icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.5rem;
+  border-width: 0.15rem;
+  border-color: #aaaaaa;
+  transition: background-color 0.2s ease;
+}
