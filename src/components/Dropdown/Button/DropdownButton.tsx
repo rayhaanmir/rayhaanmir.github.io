@@ -10,7 +10,7 @@ interface DropdownButtonProps {
 const DropdownButton = ({ text, setOpen, open }: DropdownButtonProps) => {
   return (
     <div
-      className={`dropdown-btn ${open ? "button-open" : null}`}
+      className={`dropdown-btn ${open ? "button-open" : ""}`}
       onClick={() => setOpen((open) => !open)}
     >
       {text}
